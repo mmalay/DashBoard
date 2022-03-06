@@ -6,15 +6,23 @@ import Home from './icons/Home';
 
 type Props = {
   toggleDrawer: () => void;
+  isOpen: boolean;
 };
 
-function ToolBar({ toggleDrawer }: Props) {
+function ToolBar({ isOpen, toggleDrawer }: Props) {
   return (
     <header className="sticky top-0 z-10 bg-white">
       <nav className="h-auto">
         <div className="md:mx-6 mx-4">
           <div className="flex justify-between items-center py-3">
-            <Menu styles="fill-current text-gray-500" onClick={toggleDrawer} />
+            {!isOpen ? (
+              <Menu
+                styles="fill-current text-gray-500"
+                onClick={toggleDrawer}
+              />
+            ) : (
+              <div></div>
+            )}
             <div className="flex items-center gap-4">
               <Clock styles="fill-current text-gray-500" />
               <Home styles="fill-current text-gray-500" />

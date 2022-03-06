@@ -43,7 +43,7 @@ function Layout({ children }: Props) {
               : ' transition-all opacity-100 duration-300 delay-150 translate-x-full')
           }
         >
-          <ToolBar toggleDrawer={toggleDrawer} />
+          <ToolBar isOpen={isOpen} toggleDrawer={toggleDrawer} />
           {children}
         </div>
       </div>
