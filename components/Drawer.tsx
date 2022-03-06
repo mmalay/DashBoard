@@ -13,7 +13,6 @@ import Star from './icons/Star';
 import DownArrowIcon from './icons/DownArrowIcon';
 import RightArrowIcon from './icons/RightArrowIcon';
 import Add from './icons/Add';
-import { userInfo } from 'os';
 
 type Props = {
   isOpen: boolean;
@@ -22,7 +21,7 @@ type Props = {
 
 export default function Drawer({ isOpen, toggleDrawer }: Props) {
   const [isAllFeatureMenuOpen, setIsAllFeatureMenuOpen] = useState(true);
-  const [isHygieneMenuOpen, setIsHygieneMenuOpen] = useState(true);
+  const [isHygieneMenuOpen, setIsHygieneMenuOpen] = useState(false);
   const [isSafetyMenuOpen, setIsSafetyMenuOpen] = useState(false);
   const [isQualityMenuOpen, setIsQualityMenuOpen] = useState(false);
   const [isLifeViewMenuOpen, setIsLifeViewMenuOpen] = useState(false);
@@ -35,7 +34,7 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
   return (
     <div
       className={
-        'top-0 left-0 w-80 h-full p-6 overflow-hidden bg-zinc-800 mb-28' +
+        'top-0 left-0 w-96 h-screen p-6 overflow-hidden bg-zinc-800 mb-28' +
         ' flex flex-col justify-between inset-0 transform ease-in-out ' +
         (isOpen
           ? ' transition-all opacity-100 duration-300 translate-x-0  '
@@ -53,16 +52,16 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
           </span>
         </div>
         <section className="mt-16 flex flex-col gap-3">
-          <div className="flex">
+          <div className="flex items-center">
             <Person styles="fill-current text-gray-50" />
             <span className="text-gray-50 ml-1.5">PROFILE</span>
           </div>
           <div>
             <div
-              className="flex justify-between"
+              className="flex justify-between "
               onClick={() => setIsAllFeatureMenuOpen(!isAllFeatureMenuOpen)}
             >
-              <div className="flex">
+              <div className={'flex items-center'}>
                 <AllIFeaturesIcon styles="fill-current text-gray-50" />
                 <span className="text-gray-50 ml-1.5">ALL FEATURES</span>
               </div>
@@ -82,7 +81,7 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
                       router.push('/hygiene');
                     }}
                   >
-                    <div className="flex">
+                    <div className={'flex items-center '}>
                       <HandWash styles="fill-current text-gray-50" />
                       <span className="text-gray-50 ml-1.5">HYGIENE</span>
                     </div>
@@ -123,7 +122,7 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
                   className="flex justify-between"
                   onClick={() => setIsSafetyMenuOpen(!isSafetyMenuOpen)}
                 >
-                  <div className="flex">
+                  <div className="flex items-center">
                     <SafetyIcon styles="fill-current text-gray-50" />
                     <span className="text-gray-50 ml-1.5">SAFETY</span>
                   </div>
@@ -154,7 +153,7 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
             className="flex justify-between"
             onClick={() => setIsLifeViewMenuOpen(!isLifeViewMenuOpen)}
           >
-            <div className="flex">
+            <div className="flex items-center">
               <VideoCam styles="fill-current text-gray-50" />
               <span className="text-gray-50 ml-1.5">LIVE VIEW</span>
             </div>

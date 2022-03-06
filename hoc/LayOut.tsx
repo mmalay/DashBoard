@@ -32,7 +32,7 @@ function Layout({ children }: Props) {
           <Down styles="fill-current text-black" />
         </div>
       </div>
-      <div className="flex h-screen">
+      <div className="flex h-full">
         <Drawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
         <div
           className={
@@ -53,7 +53,7 @@ function Layout({ children }: Props) {
           position: 'fixed',
           background: '#d1d5db',
           bottom: '10px',
-          right: '150px',
+          right: '10%',
           height: '3rem',
           width: '3rem',
           borderRadius: '9999px',

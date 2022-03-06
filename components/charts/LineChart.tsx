@@ -65,7 +65,7 @@ const data = [
 
 const LineChartComponent = () => {
   return (
-    <div className="w-3/4 m-auto py-8">
+    <div className="w-[78%] m-auto py-8">
       <LineChart
         width={690}
         height={280}
