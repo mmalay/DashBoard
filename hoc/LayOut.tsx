@@ -14,7 +14,7 @@ function Layout({ children }: Props) {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="h-full w-full">
+    <div className="h-screen w-full">
       <div
         className="fixed bg-white right-0 z-10"
         style={{

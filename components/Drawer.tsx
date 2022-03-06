@@ -30,7 +30,7 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
   return (
     <div
       className={
-        'top-0 left-0 w-96 h-screen overflow-hidden bg-zinc-800 mb-28' +
+        'top-0 left-0 w-96 h-full overflow-hidden bg-zinc-800 mb-28' +
         ' flex flex-col justify-between inset-0 transform ease-in-out ' +
         (isOpen
           ? ' transition-all opacity-100 duration-300 translate-x-0 p-6 '
