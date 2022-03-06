@@ -28,10 +28,14 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
   const [isLifeViewMenuOpen, setIsLifeViewMenuOpen] = useState(false);
   const router = useRouter();
 
+  if (!isOpen) {
+    return null;
+  }
+
   return (
     <div
       className={
-        'top-0 left-0 fixed w-80 h-full p-6 overflow-hidden z-50 bg-zinc-800 mb-28' +
+        'top-0 left-0 w-80 h-full p-6 overflow-hidden bg-zinc-800 mb-28' +
         ' flex flex-col justify-between inset-0 transform ease-in-out ' +
         (isOpen
           ? ' transition-all opacity-100 duration-300 translate-x-0  '

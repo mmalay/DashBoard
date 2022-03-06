@@ -11,12 +11,12 @@ export default function Home() {
         <title>OurEye.ai</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className="bg-blue-500 flex flex-col items-center h-72">
-          <div className="mx-auto mt-8">
+      <main className="w-full">
+        <div className="bg-blue-500 flex flex-col items-center h-[16rem]">
+          <div className="mx-auto mt-4">
             <TinyLineChart />
           </div>
-          <section className="flex gap-3 mt-3">
+          <section className="flex gap-3  ">
             <div className="h-3 w-3 rounded-full bg-white"></div>
             <div className="h-3 w-3 rounded-full bg-white opacity-40"></div>
             <div className="h-3 w-3 rounded-full bg-white opacity-40"></div>
@@ -25,9 +25,9 @@ export default function Home() {
             <Star styles="fill-current text-white" />
           </div>
         </div>
-        <div className="fixed w-full -mt-16">
+        <div className="fixed w-full -mt-14">
           <DashBoard />
-          <div className="flex mx-auto justify-center">
+          <div className="flex mx-auto justify-center mt-1">
             <Card
               title="HYGIENE"
               features={[

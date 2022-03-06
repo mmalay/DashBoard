@@ -10,8 +10,8 @@ const Hygiende = () => {
         <title>OurEye.ai</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen">
-        <div className="h-5/6 w-2/3 mx-auto mt-10 py-6 rounded-md bg-white">
+      <main>
+        <div className="h-4/5 w-3/4 mx-auto mt-10 py-6 rounded-md bg-white">
           <div className="flex justify-between items-center mx-12">
             <div className="flex flex-col">
               <div className="flex items-center">

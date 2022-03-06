@@ -67,10 +67,10 @@ const LineChartComponent = () => {
   return (
     <div className="w-3/4 m-auto py-8">
       <LineChart
-        width={730}
+        width={690}
         height={280}
         data={data}
-        margin={{ top: 0, right: 20, left: 10, bottom: 25 }}
+        margin={{ top: 0, right: 60, left: 15, bottom: 25 }}
       >
         <XAxis dataKey="time">
           <Label value="Time" offset={-25} position="insideBottom" />
@@ -80,11 +80,12 @@ const LineChartComponent = () => {
             value: 'Hygine Index Value',
             angle: -90,
             position: 'insideBottomLeft',
+            offset: 15,
           }}
         />
         <Tooltip />
-        <Legend verticalAlign="top" height={20} color="#8884d8" />
-        <Line type="linear" dataKey="Hygiene Index Value" stroke="#8884d8" />
+        <Legend verticalAlign="top" height={20} color="#00FA9A" />
+        <Line type="linear" dataKey="Hygiene Index Value" stroke="#00FA9A" />
       </LineChart>
     </div>
   );

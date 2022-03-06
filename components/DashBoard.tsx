@@ -15,7 +15,7 @@ const DataItem = ({ title, number }: Props) => (
 const DashBoard = () => {
   return (
     <div className="flex w-full">
-      <div className="flex mx-auto w-2/3">
+      <div className="flex mx-auto w-[77%]">
         <div className="flex bg-white w-full rounded-md justify-around mt-4 ml-3 py-6 shadow-md shadow-gray-300">
           <div className="flex flex-col">
             <span className="text-3xl font-bold">HYGIENE INDEX</span>
