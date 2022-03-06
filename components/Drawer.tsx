@@ -41,7 +41,12 @@ export default function Drawer({ isOpen, toggleDrawer }: Props) {
       <section>
         <div className="flex">
           <MenuOpen styles="fill-current text-gray-50" onClick={toggleDrawer} />
-          <span className="text-gray-50 ml-1.5">OpenEye.ai</span>
+          <span
+            className="text-gray-50 ml-1.5 cursor-pointer"
+            onClick={() => router.push('/')}
+          >
+            OpenEye.ai
+          </span>
         </div>
         <section className="mt-16 flex flex-col gap-3">
           <div className="flex">
